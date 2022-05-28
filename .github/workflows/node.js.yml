@@ -11,9 +11,11 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
+    env:
+      MONGO_URI: ${{ secrets.MONGO_URI }}
+      ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
+      REFRESH_TOKEN_SECRET: ${{ secrets.REFRESH_TOKEN_SECRET }}
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js 14.x
