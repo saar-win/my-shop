@@ -13,6 +13,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
+      PORT: 5000
+      NODE_ENV: test
       MONGO_URI: ${{ secrets.MONGO_URI }}
       ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
       REFRESH_TOKEN_SECRET: ${{ secrets.REFRESH_TOKEN_SECRET }}
